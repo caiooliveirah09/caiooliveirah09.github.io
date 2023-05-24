@@ -1,6 +1,12 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
+import localFont from "next/font/local";
+
+const minecraft = localFont({
+  src: "../../public/fonts/MinecraftTen-VGORe.ttf",
+  variable: "--font-minecraft",
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${minecraft.variable}`}>{children}</body>
     </html>
   );
 }
