@@ -2,10 +2,16 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
 import localFont from "next/font/local";
+import { Playfair_Display } from "next/font/google";
 
 const minecraft = localFont({
   src: "../../public/fonts/MinecraftTen-VGORe.ttf",
   variable: "--font-minecraft",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
 });
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${minecraft.variable}`}>{children}</body>
+      <body className={`${minecraft.variable} ${playfairDisplay.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

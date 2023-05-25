@@ -10,6 +10,10 @@ module.exports = {
     extend: {
       fontFamily: {
         minecraft: ["var(--font-minecraft)"],
+        playfairDisplay: ["var(--font-playfair-display)"],
+      },
+      colors: {
+        minecraft: "#B7B2B0",
       },
     },
   },
