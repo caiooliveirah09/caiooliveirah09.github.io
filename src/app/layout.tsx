@@ -28,7 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${minecraft.variable} ${playfairDisplay.variable}`}>
+      <body
+        className={`${minecraft.variable} ${playfairDisplay.variable} bg-gray-900`}
+      >
         {children}
       </body>
     </html>
