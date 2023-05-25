@@ -1,6 +1,19 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 export default function Menu() {
+  const router = useRouter();
+  const start = (): void => {
+    router.push("/");
+  };
   return (
-    <div className="bg-gray-900 h-screen flex flex-col justify-center items-center">
+    <div
+      className="h-screen flex flex-col justify-center items-center"
+      onClick={start}
+      onKeyDown={start}
+      tabIndex={0}
+    >
       <header>
         <h2
           className="text-white font-playfairDisplay text-3xl font-extrabold"
