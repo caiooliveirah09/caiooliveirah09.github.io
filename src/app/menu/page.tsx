@@ -44,7 +44,7 @@ export default function Menu() {
       </header>
       <main>
         <h3 className="text-[#defe47] font-mono animate-bounce text-sm">
-          press any button to start
+          press any button to start!
         </h3>
       </main>
     </motion.div>
