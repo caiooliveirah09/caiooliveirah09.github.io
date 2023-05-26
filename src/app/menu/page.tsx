@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function Menu() {
   const router = useRouter();
@@ -8,11 +9,15 @@ export default function Menu() {
     router.push("/");
   };
   return (
-    <div
+    <motion.div
       className="h-screen flex flex-col justify-center items-center"
       onClick={start}
       onKeyDown={start}
       tabIndex={0}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      exit={{ opacity: 0 }}
     >
       <header>
         <h2
@@ -31,7 +36,7 @@ export default function Menu() {
               "0px 0px 3px #03bcf4, 0 0 5px #03bcf4, 0 0 20px #03bcf4, 0 0 30px #03bcf4",
             WebkitBoxReflect: "below 1px linear-gradient(transparent, #0008)",
             lineHeight: "0.60em",
-            animation: "cyberpunk 10s linear infinite",
+            animation: "cyberpunk 5s linear infinite",
           }}
         >
           website
@@ -42,6 +47,6 @@ export default function Menu() {
           press any button to start
         </h3>
       </main>
-    </div>
+    </motion.div>
   );
 }
