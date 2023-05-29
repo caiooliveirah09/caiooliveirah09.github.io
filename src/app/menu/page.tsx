@@ -21,7 +21,7 @@ export default function Menu() {
     >
       <header className="h-3/4 flex flex-col justify-center w-fit">
         <h2
-          className="text-white font-playfairDisplay font-extrabold text-xl"
+          className="text-white font-playfairDisplay font-extrabold text-xl md:text-4xl"
           style={{
             textShadow:
               "0 0 5px #fe00fe, 0 0 10px #fe00fe, 0 0 15px #fe00fe, 0 0 20px #fe00fe, 0 0 25px #fe00fe",
@@ -30,7 +30,7 @@ export default function Menu() {
           welcome to my
         </h2>
         <h1
-          className="text-white font-minecraft text-6xl tracking-wides pt-4 text-center"
+          className="text-white font-minecraft text-6xl md:text-9xl tracking-wides pt-8 text-center"
           style={{
             textShadow:
               "0px 0px 3px #03bcf4, 0 0 5px #03bcf4, 0 0 20px #03bcf4, 0 0 30px #03bcf4",
@@ -43,7 +43,7 @@ export default function Menu() {
         </h1>
       </header>
       <main className="">
-        <h3 className="text-[#defe47] font-mono animate-bounce text-base">
+        <h3 className="text-[#defe47] font-mono animate-bounce text-base md:text-xl">
           press any button to start!
         </h3>
       </main>
